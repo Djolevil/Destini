@@ -15,16 +15,14 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        storyLabel.text = storyBrain.stories[storyBrain.storyNumber].title
-        
+                
         updateUI()
     }
     
     func updateUI() {
-        storyLabel.text = storyBrain.stories[storyBrain.storyNumber].title
-        choice1Button.setTitle(storyBrain.stories[storyBrain.storyNumber].choice1, for: .normal)
-        choice2Button.setTitle(storyBrain.stories[storyBrain.storyNumber].choice2, for: .normal)
+        storyLabel.text = storyBrain.getStoryTitle()
+        choice1Button.setTitle(storyBrain.getChoice1(), for: .normal)
+        choice2Button.setTitle(storyBrain.getChoice2(), for: .normal)
     }
 
 }
